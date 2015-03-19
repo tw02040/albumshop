@@ -1,0 +1,184 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		body {
+			font-family: '맑은 고딕', 'Malgun Gothic', 'Gothic', 'sans-serif';
+			font-size: 8pt;
+			background: radial-gradient(rgba(0, 0, 0, 0.05) 10%, transparent 20%),
+			            radial-gradient(rgba(0, 0, 0, 0.1) 10%, transparent 20%), #ffffff;
+			background-size: 80px 80px;
+			background-position: 40px 40px, 0 0;
+			height: 100%;
+		}
+		#all { 
+			/*background-color: #000000;*/
+			margin: auto;
+			max-width: 1000px;
+			margin: 1em auto;
+			padding: 2em;
+		}
+		nav {
+			position: fixed;
+			top: 100px;
+			left: 50px;
+			text-align: left;
+		}
+		header {
+			text-align: center;
+		}
+		header img {
+			-webkit-transform: rotate(5deg);
+			-webkit-transform-origin: 0 0;
+		}
+		header p {
+			display: inline-block;
+			-webkit-transform: rotate(90deg);
+		}
+		ul {
+			display: inline-block;
+		    background: #fff;
+		    width: 150px;
+		    border: 1px solid #999;
+		    border-radius: 5px;
+		    list-style: none;
+		    padding: 3px;
+		    margin-top: 40px;
+		}
+		ul li {
+			margin:0 10px;
+		    border-bottom: 1px solid #999;
+		    padding: 10px;
+		}
+		ul li a {
+			text-decoration: none;
+			color: #666;
+		}
+		ul li:last-child {
+			border-bottom: none;
+		}
+		body > div {
+			width: 500px;
+			margin: 50px auto 0;
+		}
+
+			article {
+				width: 350px;
+				margin-top: 20px;
+				float: left;
+			}
+
+				article div {
+					width: 120px;
+					height: 120px;
+					background: #ccc;
+					float: left;
+					margin: 0 5px 5px 0;
+					text-align: center;
+				}
+
+				label {
+					cursor: pointer;
+					padding: 10px;
+					background: #f5f5f5;
+					width: 50px;
+					height: 20px;
+					float: left;
+					text-align: center;
+					margin-right: 10px;
+				}
+				div img {
+					width: 120px;
+				}
+
+				label:hover {
+					background: #eee;
+				}
+
+				input {
+					position: absolute;
+					left: -9999px;
+				}
+
+				input:checked + label {
+					font-weight: bold;
+				}
+
+				input:checked ~ ol li {
+					opacity:0.3;
+					-webkit-transform: scale(0.7);
+				}
+
+				input:checked ~ article div {
+					-webkit-transform-origin: 0 0;
+				}
+
+				input[value="1"]:checked ~ article div:first-child {
+					-webkit-transform: translate(260px, 0) scale(3.09);
+				}
+
+				input[value="2"]:checked ~ article div:nth-child(2) {
+					-webkit-transform: translate(135px, 0) scale(3.09);
+				}
+
+				input[value="3"]:checked ~ article div:nth-child(3) {
+					-webkit-transform: translate(260px, -125px) scale(3.09);
+				}
+
+				input[value="4"]:checked ~ article div:nth-child(4) {
+					-webkit-transform: translate(135px, -125px) scale(3.09);
+				}
+
+				input[value="5"]:checked ~ article div:nth-child(5) {
+					-webkit-transform: translate(260px, -250px) scale(3.09);
+				}
+
+				input[value="6"]:checked ~ article div:last-child {
+					-webkit-transform: translate(135px, -250px) scale(3.09);
+				}
+	</style>
+</head>
+<body>
+		<header>
+			<img src="indilogo.png">
+			<p>indi music</p>
+		</header>
+			<nav>
+				<ul>
+		            <li><a href="#">아티스트별</a></li>
+		            <li><a href="#">인기차트</a></li>
+		            <li><a href="#">신곡</a></li>
+	        	</ul>
+			</nav>
+		<div>
+		<input id="one" name="transforms" type="radio" value="1">
+        <label for="one">봄</label>
+
+		<input id="two" name="transforms" type="radio" value="2">
+        <label for="two">이별</label>
+
+        <input id="three" name="transforms" type="radio" value="3">
+        <label for="three">이동</label>
+
+        <input id="four" name="transforms" type="radio" value="4">
+        <label for="four">친구</label>
+
+        <input id="five" name="transforms" type="radio" value="5">
+        <label for="five">혼자</label>
+
+        <input id="six" name="transforms" type="radio" value="6">
+        <label for="six">새벽</label>
+
+		<article>
+		    <div><img src="어쿠스틱콜라보.jpg"></div>
+		    <div><img src="스웨덴세탁소.jpg"></div>
+		    <div><img src="가을방학.jpg"></div>
+		    <div><img src="슈가볼.jpg"></div>
+		    <div><img src="스탠딩에그.jpg"></div>
+		    <div><img src="안녕하신가영.jpg"></div>
+		</article>
+
+	</div>
+</body>
+</html>
